@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+    <video autoplay muted loop id="background-video">
+        <source src="video2.mp4" type="video/mp4">
+    </video>
+
+    <nav class="navbar">
+        <h1 class="logo">FLORES</h1>
+        <ul class="nav-links">
+            <li><a href="#header-content">Home</a></li>
+            <li><a href="#events">Variety</a></li>
+            <li><a href="#explore">About</a></li>
+            <li><a href="#tours">Fact</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+
+        <i class="ri-menu-line menu-btn"></i>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="header-content">
+        <div class="header-content">
+            <h2>Explore The Colorful Sunflower</h2>
+            <div class="line"></div>
+            <h1>A BEAUTIFUL FLOWER</h1>
+            <a href="#events" class="ctn">Learn More</a>
+        </div>
+    </header>
+
+    <!-- Events Section -->
+    <section class="events" id="events">
+        <div class="title">
+            <h1>Variety of Sunflower</h1>
+            <div class="line"></div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <img src="lemon.jpg" alt="">
+                <h4>Lemon Queen</h4>
+                <p>Lemon Queen Sunflowers grow tall, reaching 5 to 7 feet, and produce large 10-inch blooms. Drought-tolerant and sun-loving, they attract birds with their abundant seeds.</p>
+            </div>
+            <div class="col">
+                <img src="earthwalker.jpg" alt="">
+                <h4>Earthwalker</h4>
+                <p>Tall and majestic sunflowers in warm shades of orange, red, gold, and copper can transform any garden into a stunning masterpiece. Their late-season autumnal blooms mark the start of fall.</p>
+            </div>
+            <div class="col">
+                <img src="annuus.jpg" alt="">
+                <h4>Hilianthus Annuus</h4>
+                <p>The common sunflower, part of the daisy family Asteraceae, is an annual plant known for its edible oily seeds. These seeds are used to produce cooking oil, feed livestock, birds, and enhance garden aesthetics.</p>
+            </div>
+        </div>
+
+        <div class="rows">
+            <div class="col">
+                <img src="slender.jpg" alt="" class="lol">
+                <h4>Slender</h4>
+                <p>Slender Sunflower is a perennial herb in the Asteraceae family, native to central and southern California and Baja California. It grows in chaparral and yellow pine forests, reaching heights of 0.5 to 2 meters.</p>
+            </div>
+            <div class="col">
+                <img src="teddy.jpg" alt="">
+                <h4>Teddy Bear</h4>
+                <p>The Teddy Bear Sunflower is a short, bushy, dwarf variety growing 18 inches to 3 feet tall. Perfect for the front of garden patches, it is grown in 2.5" pots. As a warm-weather annual, it requires new seeds each year.</p>
+            </div>
+            <div class="col">
+                <img src="white sun.jpeg" alt="">
+                <h4>White Anemone</h4>
+                <p>The White Anemone Sunflower is a leafy perennial with striking white, anemone-like flowers, often found in large colonies. The single flowers are about 1¾ inches wide, featuring 5 sepal-like petals and numerous yellow stamens.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Section -->
+    <section class="explore" id="explore">
+        <div class="explore-content">
+            <h1>SUNFLOWER</h1>
+            <div class="line"></div>
+            <p>Sunflowers, with their vibrant yellow petals and large heads, symbolize adoration and loyalty. Their unique behavior of turning toward the sun reflects unwavering faith and positivity in relationships. The bright appearance of sunflowers evokes happiness and warmth, making them ideal for uplifting occasions. They also signify abundance, producing numerous seeds that nourish various creatures. Overall, sunflowers embody resilience and strength, reminding us to face challenges with hope.</p>
+        </div>
+    </section>
+
+    <!-- Tours Section (Facts) -->
+    <section class="Facts" id="tours">
+        <div class="rowing">
+            <div class="col content-col">
+                <h1>FACTS</h1>
+                <div class="line"></div>
+                <p>     Sunflowers are incredibly useful.
+                    Sunflowers are originally from North America and have been cultivated for over 4,500 years. This is partly because the entirety of the sunflower plant is edible, so the leaves, stalks, and roots could all be used as food. In fact, sunflowers were grown as food in North America before other crops such as corn became commonplace. 
+                    
+                    In addition, sunflowers were milled to create flour, and their seeds were roasted and eaten. As is still the case today, sunflower oil was used in cooking. The oil and pigments could also be used for various cosmetic applications such as dyes, and the stalk could be used in construction.
+                    
+                    Sunflowers became popular as a decorative flower when Spanish explorers brought the seeds back to Europe in the 1500s.</p>
+            </div>
+            <div class="col image-col">
+                <div class="image-gallery">
+                    <img src="1.jpg" alt="">
+                    <img src="2.jpg" alt="">
+                    <img src="3.jpg" alt="">
+                    <img src="4.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="footer" id="footer">
+        <p>1743 Riverside Lawaan III, Talisay City, Cebu | Phone: 09355478148 | rhonallanto@gmail.com</p>
+        <p>Copyright @ 2024 Beautiful Sunflower</p>
+    </section>
+
+    <script>
+        // Select all the nav links
+        const navLinks = document.querySelectorAll('.nav-links li');
+        
+        // Loop through each nav link and add a click event listener
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // Remove 'ctn' class from all nav links
+                navLinks.forEach(nav => nav.classList.remove('ctn'));
+
+                // Add 'ctn' class to the clicked link
+                this.classList.add('ctn');
+            });
+        });
+
+        // Menu button functionality for mobile
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinksContainer = document.querySelector(".nav-links");
+        const text = document.querySelector('.logo');
+    
+
+        let isWhite = false;
+
+        
+        menuBtn.addEventListener('click', () => {
+            navLinksContainer.classList.toggle('mobile-menu');
+        });
+
+        menuBtn.addEventListener('click', () => {
+            if (isWhite) {
+                    text.style.color = '#aa6805'; // Change back to original color
+                } else {
+                    text.style.color = 'white'; // Change to white
+                }
+                isWhite = !isWhite; // Toggle the state
+            });
+    </script>
+
+</body>
+</html>
